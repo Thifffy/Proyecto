@@ -1,0 +1,370 @@
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenida Fitness</title>
+      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;600&display=swap" rel="stylesheet">
+     <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+<script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+     <style>
+ 
+
+     </style>
+</head>
+<body class="bg-white text-gray-800 plus-jakarta-sans">
+
+  <!-- Video de fondo -->
+  <!-- <video autoplay muted loop playsinline
+         class="absolute top-0 left-0 w-full h-full object-cover z-0">
+    <source src="domi.mov" type="video/mp4" />
+    Tu navegador no soporta el video.
+  </video> -->
+<header class="relative h-screen  overflow-hidden rounded-lg rounded p-6 rounded-lg mt-10">
+    <!-- Imagen de fondo -->
+     <img src="https://img.freepik.com/fotos-premium/gimnasio-casa-minimalista-pocos-equipos-entrenamiento-esenciales-diseno-interior-minimalista-ia-generativa_864588-9682.jpg" alt="Imagen de fondo"
+         class="absolute top-0 left-0 w-full h-full object-cover z-0" />
+
+
+  <nav class="relative z-20 flex justify-between items-center px-8 py-4 text-white">
+  <img src="logo.png" alt="Logo" class="h-10" />
+  <ul class="flex gap-6 font-semibold">
+    <li><a href="inicio.html" class="hover:text-gray-300 transition-colors">Inicio</a></li>
+    <li><a href="servicios.html" class="hover:text-gray-300 transition-colors">Servicios</a></li>
+    <li><a href="blog.html" class="hover:text-gray-300 transition-colors">Blog</a></li>
+    <li><a href="dashboard.html" class="hover:text-gray-300 transition-colors">Mi panel</a></li>
+    <li>
+      <a href="contacto.html"
+         class="inline-block bg-[#a8b2a1] font-bold px-4 py-2 rounded-lg border border-white transition-all duration-300 hover:bg-transparent hover:text-gray-300">
+        Contacto
+      </a>
+    </li>
+  </ul>
+</nav>
+
+  <!-- Contenido encima del video -->
+  <!-- <nav class="relative z-20 flex justify-between items-center px-8 py-4 text-white">
+    <img src="logo.png" alt="Logo" class="h-10">
+    <ul class="flex gap-6 font-semibold p-10">
+      <li><a href="inicio.html" class="hover:text-gray-300">Inicio</a></li>
+      <li><a href="servicios.html" class="hover:text-gray-300">Servicios</a></li>
+       <li><a href="mipanel.html" class="hover:text-gray-300">Mi panel</a></li>
+      <li><a href="blog.html" class="hover:text-gray-300">Blog</a></li>
+     <li>
+ <li>
+  <a href="contacto.html"
+     class="inline-block bg-[#bfa89e] text-black font-bold px-4 py-2 rounded-lg border border-white transition-colors duration-300 hover:bg-transparent hover:text-white">
+    Contacto
+  </a>
+</li>
+</li>
+    </ul>
+  </nav> -->
+
+  <div class="relative z-20 flex flex-col items-center justify-center h-full text-white text-center px-4">
+    <h1 class="text-4xl md:text-6xl font-extrabold">Bienvenido a Mi Sitio</h1>
+    <p class="mt-4 text-lg md:text-xl">Tu mensaje inspirador aquí</p>
+    <a href="#reserva" class="mt-10 inline-block bg-[#bfa89e] text-black text-bg-dark font-bold px-8 py-3 rounded-lg border border-white transition-colors duration-300 hover:bg-transparent hover:text-white">RESERVA TU SESION</a>
+    
+  </div>
+</header>
+<!-- 
+   <header class="w-full p-6 flex justify-between items-center border-b ">
+      <h1 class="text-xl font-bold">MiMarca</h1>
+      <nav class="space-x-4">
+        <a href="#inicio" class="hover:text-indigo-600 font-medium">Inicio</a>
+        <a href="#servicios" class="hover:text-indigo-600 font-medium">Servicios</a>
+        <a href="#sobre" class="hover:text-indigo-600 font-medium">Sobre mí</a>
+        <a href="#contacto" class="hover:text-indigo-600 font-medium">Contacto</a>
+      </nav>
+    </header>
+  
+     -->
+ <!-- <section class="bg-[#d6d6d6]">
+  <div class="bg mx-auto grid md:grid-cols-2 gap-10 items-center">
+  
+    <div class="flex justify-center">
+      <img src="https://cdn.pixabay.com/photo/2017/08/07/19/44/girl-2607110_1280.jpg" alt="Entrenamiento" class="  max-w-[400] h-[400] md-:side-full  shadow-lg" />
+    </div>
+
+   
+    <div class="text-center md:text-left  text-white p-8 rounded-lg ">
+      <h1 class="text-4xl max-w-2xl font-extrabold" ><span class="text-[#dcdcd4]">PLANES</span> PERSONALIZADOS DE FITNESS
+Y NUTRICIÓN</h1>
+      <p class="mt-4  max-w-2xl text-md text-gray-300 ">Nuestros servicios de entrenamiento en salud y fitness están diseñados para personas 
+        de todos los niveles y objetivos. Ya sea que quieras perder peso, ganar músculo, mejorar tu resistencia o simplemente mantener 
+        un estilo de vida saludable, nuestros entrenadores experimentados están dedicados a guiarte en cada paso del camino.</p>
+
+
+  <a href="#reserva" class="mt-6 inline-block bg-[#dcdcd4] text-black text-bg-dark font-bold px-8 py-3 rounded-lg border border-white transition-colors duration-300 hover:bg-black hover:text-[#dcdcd4]">RESERVA TU SESION</a>
+    
+    </div> 
+      
+  
+
+</section> -->
+<section class="flex justify-center p-8 py-20">
+  <div class=" grid grid-cols-3 gap-12 text-center ">
+
+    <!-- Bloque 1 -->
+    <div class="hero-stat">
+      <p class="text-2xl font-bold number">18.0K</p>
+      <p class="text-[#4a4a4a]">Suscriptores</p>
+    </div>
+
+    <!-- Separador + bloque 2 -->
+    <div class="border-l border-gray-400 pl-8 hero-stat">
+      <p class="text-2xl font-bold number">128</p>
+      <p class="text-[#4a4a4a]">Videos</p>
+    </div>
+
+    <!-- Separador + bloque 3 -->
+    <div class="border-l border-gray-400 pl-8 hero-stat">
+      <p class="text-2xl font-bold number">1.0M</p>
+      <p class="text-[#4a4a4a]">Visualizaciones</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="bg-[#f5f0eb] py-16 rounded-lg rounded-xxl text-[#2E2E2E] shadow-lg w-[90%] mx-auto " >
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center px-6">
+    
+    <!-- Imagen reducida y con borde elegante -->
+    <div class="flex justify-center">
+      <div class="rounded-xl overflow-hidden shadow-md border border-[#ccc] w-[400px] h-[400px]">
+        <img src="https://img.freepik.com/premium-photo/interior-modern-minimalist-gym_863013-33922.jpg" alt="Entrenamiento" class="object-cover w-full h-full" />
+      </div>
+    </div>
+
+    <!-- Contenido con fondo gris suave -->
+    <div class="text-[#2E2E2E] bg-[#f5f0eb] p-6 rounded-lg rounded ">
+      <h1 class="text-4xl font-extrabold leading-tight">
+        <span class="text-[#bfa89e]">PLANES</span> PERSONALIZADOS DE FITNESS Y NUTRICIÓN
+      </h1>
+      <p class="mt-4 text-base text-[#4a4a4a]">
+        Nuestros servicios de entrenamiento están diseñados para todos los niveles. Ya sea que quieras perder peso, ganar músculo o simplemente mantener un estilo de vida saludable, nuestros entrenadores te guiarán paso a paso.
+      </p>
+      <a href="#reserva" class="mt-6 inline-block bg-[#bfa89e] text-white font-bold px-6 py-3 rounded-md transition hover:bg-[#a8b2a1] hover:text-[#dcdcd4]">
+        RESERVA TU SESIÓN
+      </a>
+    </div>
+    
+  </div>
+<!-- </section> -->
+<!-- <section class="bg-[#d6d6d6] py-16 px-6 rounded-lg rounded"> -->
+   <div class="relative z-20 flex flex-col items-center justify-center h-full text-center px-4 p-6">
+  <h5 class="text-lg font-bold text-center text-black mb-8">PLANES DE ENTRENAMIENTO PERSONALIZADOS</h5>
+  <h1 class="max-w-4xl mx-auto font-bold text-center md:text-4xl text-black mb-6">
+    MÉTODOS DE ENTRENAMIENTO INNOVADORES PARA MUJERES
+  </h1>
+  <h3 class="max-w-4xl mx-auto text-l md:text-l font-semibold leading-snug text-gray-800 text-center">
+    Ofrecemos planes de entrenamiento personalizados basados en tus necesidades únicas. Además de rutinas de ejercicio a medida, brindamos asesoramiento nutricional experto para asegurarnos de que estés alimentando tu cuerpo con los alimentos y vitaminas adecuados para obtener resultados óptimos.
+  </h3>
+  
+        <a href="servicios.html" class="mt-6 inline-block bg-[#bfa89e] text-[#dcdcd4] text-bg-transparent font-bold px-8 py-3 rounded-lg border border-white transition-colors duration-300 hover:bg-[#a8b2a1] hover:text-black">NUESTROS SERVICIOS</a>
+    </div>
+ </section> 
+
+
+
+<section class="py-16 bg-white flex justify-center text-center rounded-xl rounded-lg"  id="reserva">
+<!-- 
+<div class="grid grid-cols-3 md:grid-cols-3  md:grid-cols-5 gap-6 px-4 py-10"> -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 px-4 py-10" id="card">
+  
+  <!-- contenido -->
+
+<div class="bg-[#f5f0eb] rounded-md shadow-lg overflow-hidden w-80 h-[520px] mx-auto rounded-xl">
+  <div class="tarjeta-gsap bg-[#f5f0eb] rounded-md shadow-lg overflow-hidden w-80 h-[520px] mx-auto rounded-xl">
+  <div class="relative w-full h-full">
+    <img src="gym1.PNG" alt="Imagen 1" class="w-full h-full object-cover" />
+
+    <!-- Botón encima de la imagen -->
+    <a href="#reserva"
+       class="absolute bottom-4 right-4 bg-white text-[#2E2E2E]  font-bold px-5 py-2 rounded-md transition-colors duration-300 hover:bg-white hover:text-[#bfa89e] border border-white shadow-md">
+      Fuerza & Movilidad
+    </a>
+    <a href="#reserva"
+       class="absolute bottom-4 left-4 bg-white text-[#2E2E2E] font-bold px-1 py-2 rounded-md transition-colors duration-300 hover:bg-white hover:text-[#bfa89e] border border-white shadow-md">
+  2 semanas
+    </a>
+  </div>
+</div>
+</div>
+<div class="bg-[#f5f0eb] rounded-md shadow-lg overflow-hidden w-80 h-[520px] mx-auto rounded-xl">
+<div class="tarjeta-gsap bg-[#f5f0eb] rounded-md shadow-lg overflow-hidden w-80 h-[520px] mx-auto rounded-xl">
+  <div class="relative w-full h-full">
+    <img src="gym1.PNG" alt="Imagen 1" class="w-full h-full object-cover" />
+    <a href="#reserva"
+       class="absolute bottom-4 right-4 bg-white text-[#2E2E2E]  font-bold px-5 py-2 rounded-md transition-colors duration-300 hover:bg-white hover:text-[#bfa89e] border border-white shadow-md">
+      Coaching & Comunidad
+    </a>
+    <a href="#reserva"
+       class="absolute bottom-4 left-4 bg-white text-[#2E2E2E] font-bold px-1 py-2 rounded-md transition-colors duration-300 hover:bg-white hover:text-[#bfa89e] border border-white shadow-md">
+  2 semanas
+    </a>
+  </div>
+</div>
+</div>
+<div class="bg-[#f5f0eb] rounded-md shadow-lg overflow-hidden w-80 h-[520px] mx-auto rounded-xl">
+  <div class="relative w-full h-full">
+    <div class="tarjeta-gsap bg-[#f5f0eb] rounded-md shadow-lg overflow-hidden w-80 h-[520px] mx-auto rounded-xl">
+    <img src="gym1.PNG" alt="Imagen 1" class="w-full h-full object-cover " />
+    <a href="#reserva"
+       class="absolute bottom-4 right-4 bg-white text-[#2E2E2E]  font-bold px-5 py-2 rounded-md transition-colors duration-300 hover:bg-white hover:text-[#bfa89e] border border-white shadow-md">
+      Fuerza & Movilidad
+    </a>
+    <a href="#reserva"
+       class="absolute bottom-4 left-4 bg-white text-[#2E2E2E] font-bold px-1 py-2 rounded-md transition-colors duration-300 hover:bg-white hover:text-[#bfa89e] border border-white shadow-md">
+  2 semanas
+    </a>
+  </div>
+  </div>
+</div>
+  
+<div class="bg-[#f5f0eb] rounded-md shadow-lg overflow-hidden w-80 h-[520px] mx-auto rounded-xl">
+  <div class="tarjeta-gsap bg-[#f5f0eb] rounded-md shadow-lg overflow-hidden w-80 h-[520px] mx-auto rounded-xl">
+  <div class="relative w-full h-full">
+    <img src="https://images.unsplash.com/photo-1505576633757-0ac1084af824?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Imagen 1" class="w-full h-full object-cover" />
+
+    <!-- Botón encima de la imagen -->
+    <a href="#reserva"
+       class="absolute bottom-4 right-25 bg-white text-[#2E2E2E]  font-bold px-5 py-2 rounded-md transition-colors duration-300 hover:bg-white hover:text-[#bfa89e] border border-white shadow-md">
+    Planes Nutricionales
+    </a>
+    
+    </a>
+  </div>
+</div>
+  </div>
+
+<div class="bg-[#f5f0eb] rounded-md shadow-lg overflow-hidden w-80 h-[520px] mx-auto rounded-xl">
+  <div class="tarjeta-gsap bg-[#f5f0eb] rounded-md shadow-lg overflow-hidden w-80 h-[520px] mx-auto rounded-xl">
+  <div class="relative w-full h-full">
+    <img src="Viviana9.png" alt="Imagen 1" class="w-full h-full object-cover" />
+
+    <!-- Botón encima de la imagen -->
+    <a href="#reserva"
+       class="absolute bottom-4 right-4 bg-white text-[#2E2E2E]  font-bold px-5 py-2 rounded-md transition-colors duration-300 hover:bg-white hover:text-[#bfa89e] border border-white shadow-md">
+     Embarazo & Postparto
+    </a>
+    <a href="#reserva"
+       class="absolute bottom-4 left-4 bg-white text-[#2E2E2E] font-bold px-1 py-2 rounded-md transition-colors duration-300 hover:bg-white hover:text-[#bfa89e] border border-white shadow-md">
+  2 semanas
+    </a>
+  </div>
+</div>
+</div>
+  </div>
+</section>
+
+<footer class="bg-[#bfa89e] text-[#2E2E2E] px-6 py-12 rounded-xl">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 text-sm">
+    
+    <!-- Columna 1 -->
+    <div>
+      <h4 class="font-bold text-lg mb-4">Sobre Nosotros</h4>
+      <p class="text-[#4a4a4a]">
+        Somos un equipo apasionado por el bienestar físico y mental. Ofrecemos soluciones personalizadas en entrenamiento, nutrición y maternidad.
+      </p>
+    </div>
+
+    <!-- Columna 2 -->
+    <div>
+      <h4 class="font-bold text-lg mb-4">Enlaces</h4>
+      <ul class="space-y-2">
+        <li><a href="servicios.html" class="hover:text-[#a8b2a1]">Servicios</a></li>
+        <li><a href="reserva." class="hover:text-[#a8b2a1]">Reserva tu sesión</a></li>
+        <li><a href="contacto.html" class="hover:text-[#a8b2a1]">Contacto</a></li>
+      </ul>
+    </div>
+
+    <!-- Columna 3 -->
+    <div>
+      <h4 class="font-bold text-lg mb-4">Síguenos</h4>
+      <div class="flex space-x-4">
+        <a href="https://www.instagram.com/" class="hover:text-pink-500 transition">
+    <i class="fab fa-instagram text-2xl"></i>
+ </a>
+        <a href="https://es-es.facebook.com/" class="hover:text-blue-600 transition">
+
+           <i class="fab fa-facebook-f text-2xl"></i>
+
+
+        </a>
+        <a href="https://www.youtube.com/" class="hover:text-red-600 transition">  <i class="fab fa-youtube text-2xl"></i>
+
+</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="border-t border-[#bbb] mt-10 pt-6 text-center text-xs text-[#4a4a4a]">
+    &copy; 2025 FitTribe. Todos los derechos reservados.
+  </div>
+</footer> 
+<script>
+  gsap.from(".hero-stat", {
+  opacity: 0,
+  y: 30,                // Entrada desde abajo
+  stagger: 0.2,         // Animación en cadena
+  duration: 1,
+  delay: 0.5,
+  ease: "power2.out"
+});
+
+
+// ============================
+// FUNCIÓN PARA ANIMAR NÚMEROS CONTADORES
+// ============================
+function animateNumber(selector, endValue, duration = 1) {
+  const element = document.querySelector(selector);
+  const obj = { val: 0 };
+
+  gsap.to(obj, {
+    val: endValue,
+    duration: duration,
+    ease: "power3.out",
+    onUpdate: () => {
+      // Mostrar con separadores de miles si es > 1000
+      if (endValue >= 1000) {
+        element.textContent = Math.floor(obj.val).toLocaleString("en-US");
+      } else {
+        element.textContent = Math.floor(obj.val);
+      }
+    }
+  });
+}
+
+// Ejecutar contadores al cargar
+animateNumber(".hero-stat:nth-child(1) .number", 18000, 2);    // Suscriptores
+animateNumber(".hero-stat:nth-child(2) .number", 128, 3);      // Videos
+animateNumber(".hero-stat:nth-child(3) .number", 100000, 4);  // Visualizaciones
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.utils.toArray(".tarjeta-gsap").forEach((card, i) => {
+    gsap.from(card, {
+      scrollTrigger: {
+        trigger: card,
+        start: "top 90%",
+        toggleActions: "play none none none",
+      },
+      opacity: 0,
+      y: 50,
+      duration: 1,
+      delay: i * 1,
+      ease: "power3.out"
+    });
+  });
+
+
+</script>
+</body>
+</html>

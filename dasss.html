@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard Fitness - Senada</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-[#f5f0eb] text-[#2E2E2E]">
+
+  <!-- 🧭 Header -->
+  <header class="bg-white shadow-md py-6 px-8 mt-10 rounded rounded-xl">
+    <h1 class="text-3xl font-bold tracking-tight">Mi Panel de Progreso</h1>
+  </header>
+
+  <!-- 📊 Dashboard Principal -->
+  <main class="max-w-7xl mx-auto py-12 px-6 grid md:grid-cols-3 gap-8">
+
+    <!-- 🧾 Tarjetas de resumen -->
+    <section class="md:col-span-1 space-y-6">
+      <div class="bg-white rounded-xl shadow p-6">
+          <i class="fas fa-dumbbell"></i>
+        <h2 class="text-sm text-[#bfa89e] font-medium mb-1">Sesión de hoy</h2>
+        <p class="text-xl font-semibold">Piernas + Core</p>
+      </div>
+      <div class="bg-white rounded-xl shadow p-6">
+         <i class="fas fa-fire"></i>
+        <h2 class="text-sm text-[#bfa89e] font-medium mb-1">Minutos activos</h2>
+        <p class="text-xl font-semibold">52 min</p>
+      </div>
+      <div class="bg-white rounded-xl shadow p-6">
+        <h2 class="text-sm text-[#bfa89e] font-medium mb-1">Calorías quemadas</h2>
+        <p class="text-xl font-semibold">612 kcal</p>
+      </div>
+    </section>
+
+    <!-- 📈 Gráfico de actividad -->
+    <section class="md:col-span-2 bg-white rounded-xl shadow p-8">
+      <h2 class="text-2xl font-bold mb-4 text-[#bfa89e]">Actividad semanal</h2>
+      <canvas id="graficoActividad" height="200"></canvas>
+    </section>
+
+  </main>
+
+  <!-- 💬 Impacto del Programa -->
+  <section class="bg-white py-20 px-6 text-[#2E2E2E]">
+    <div class="max-w-7xl mx-auto text-center mb-16">
+      <h2 class="text-4xl md:text-6xl font-semibold italic tracking-tight uppercase"><span class="text-[#a8b2a1]">Transformaciones</span> que inspiran</h2>
+      <p class="text-[#4a4a4a] text-lg">Cada número representa una historia de esfuerzo, constancia y cambio real.</p>
+    </div>
+<div class="dashboard-item bg-white rounded-xl shadow p-6">
+ 
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+      
+      <div class="bg-[#f5f0eb] rounded-xl shadow-md p-6">
+        <h3 class="text-5xl font-extrabold text-[#bfa89e]">+312</h3>
+        <p class="mt-2 text-sm text-[#4a4a4a]">Personas han confiado en nuestro programa</p>
+      </div> 
+      <div class="bg-[#f5f0eb] rounded-xl shadow-md p-6">
+        <h3 class="text-5xl font-extrabold text-[#bfa89e]">-6.4 kg</h3>
+        <p class="mt-2 text-sm text-[#4a4a4a]">Promedio de pérdida de peso por cliente</p>
+      </div>
+      <div class="bg-[#f5f0eb] rounded-xl shadow-md p-6">
+        <h3 class="text-5xl font-extrabold text-[#bfa89e]">9 semanas</h3>
+        <p class="mt-2 text-sm text-[#4a4a4a]">Tiempo medio para alcanzar el primer objetivo</p>
+      </div>
+      <div class="bg-[#f5f0eb] rounded-xl shadow-md p-6">
+        <h3 class="text-5xl font-extrabold text-[#bfa89e]">87%</h3>
+        <p class="mt-2 text-sm text-[#4a4a4a]">Clientes que reportan mayor energía y autoestima</p>
+      </div>
+    </div>
+</div>
+  </section>
+
+  <footer class="bg-[#bfa89e] text-[#2E2E2E] px-6 py-12  rounded-xl">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 text-sm">
+    
+    <!-- Columna 1 -->
+    <div>
+      <h4 class="font-bold text-lg mb-4">Sobre Nosotros</h4>
+      <p class="text-[#4a4a4a]">
+        Somos un equipo apasionado por el bienestar físico y mental. Ofrecemos soluciones personalizadas en entrenamiento, nutrición y maternidad.
+      </p>
+    </div>
+
+    <!-- Columna 2 -->
+    <div>
+      <h4 class="font-bold text-lg mb-4">Enlaces</h4>
+      <ul class="space-y-2">
+        <li><a href="servicios.html" class="hover:text-[#a8b2a1]">Servicios</a></li>
+        <li><a href="reserva." class="hover:text-[#a8b2a1]">Reserva tu sesión</a></li>
+        <li><a href="contacto.html" class="hover:text-[#a8b2a1]">Contacto</a></li>
+      </ul>
+    </div>
+
+    <!-- Columna 3 -->
+    <div>
+      <h4 class="font-bold text-lg mb-4">Síguenos</h4>
+      <div class="flex space-x-4">
+        <a href="https://www.instagram.com/" class="hover:text-[#a8b2a1]">Instagram</a>
+        <a href="https://es-es.facebook.com/" class="hover:text-[#a8b2a1]">Facebook</a>
+        <a href="https://www.youtube.com/" class="hover:text-#a8b2a1]">YouTube</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="border-t border-[#bbb] mt-10 pt-6 text-center text-xs text-[#4a4a4a]">
+    &copy; 2025 FitTribe. Todos los derechos reservados.
+  </div>
+</footer> 
+  <!-- 📌 Chart.js Config -->
+  <script>
+    const ctx = document.getElementById('graficoActividad').getContext('2d');
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb', 'Dom'],
+        datasets: [{
+          label: 'Minutos de actividad',
+          data: [30, 45, 60, 50, 40, 70, 20],
+          fill: true,
+          backgroundColor: 'rgba(168, 178, 161, 0.15)',
+          borderColor: '#a8b2a1',
+          tension: 0.4,
+          borderWidth: 2.5,
+          pointRadius: 5,
+          pointBackgroundColor: '#bfa89e',
+          pointBorderColor: '#fff',
+          pointHoverRadius: 6
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { display: false }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: { color: '#4a4a4a' },
+            grid: { color: '#eaeaea' }
+          },
+          x: {
+            ticks: { color: '#4a4a4a' },
+            grid: { display: false }
+          }
+        }
+      }
+    });
+
+// gsap
+
+
+  document.addEventListener('DOMContentLoaded', () => {
+    gsap.from(".dashboard-item", {
+      opacity: 0,
+      y: 60,
+      duration: 1.2,
+      stagger: 0.3,
+      ease: "power3.out"
+    });
+  });
+
+
+  </script>
+
+</body>
+</html>

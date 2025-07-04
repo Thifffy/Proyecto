@@ -1,0 +1,222 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;600&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+ 
+<body class="bg- text-[#2E2E2E]">
+
+  <header class="bg-[#f5f0eb] shadow-md py-6 px-8 mt-10 rounded-xl">
+<nav class="relative z-20 flex justify-between items-center px-8 py-4 text-gray-800">
+  <img src="logo.png" alt="Logo" class="h-10" />
+  <ul class="flex gap-6 font-semibold">
+    <li><a href="inicio.html" class="hover:text-gray-300 transition-colors">Inicio</a></li>
+    <li><a href="servicios.html" class="hover:text-gray-300 transition-colors">Servicios</a></li>
+    <li><a href="blog.html" class="hover:text-gray-300 transition-colors">Blog</a></li>
+    <li><a href="dashboard.html" class="hover:text-gray-300 transition-colors">Mi panel</a></li>
+    <li>
+      <a href="contacto.html"
+         class="inline-block bg-[#a8b2a1] font-bold px-4 py-2 rounded-lg border border-white transition-all duration-300 hover:bg-transparent hover:text-gray-300">
+        Contacto
+      </a>
+    </li>
+  </ul>
+</nav>
+  
+</header>
+</section>
+<div class="bg-white shadow-md py-6 px-8 rounded-b-xl mt-6 w-[80%] mx-auto">
+
+   
+   
+   
+    <h1 class="text-3xl font-bold">📅 Rutina semanal</h1>
+    <p class="text-[#4a4a4a] mt-1">Marca cada día cuando completes tu rutina</p>
+    <div class="bg-[#e7e3de] rounded-full h-4 mt-4 w-full overflow-hidden">
+      <div id="barraProgreso" class="bg-[#a8b2a1] h-full w-0 transition-all duration-500"></div>
+    </div>
+ 
+
+  <!-- 🏋️ Rutinas semanales -->
+  <main class="max-w-6xl mx-auto py-10 px-6 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    <!-- Día individual -->
+     <a href="/rutina/lunes" class="block">
+
+    <div class="dia bg-white rounded-xl shadow-xl drop-shadow  p-6 transform transition duration-300 hover:scale-110">
+      <label class="flex items-center gap-3">
+        <input type="checkbox" class="checkbox w-5 h-5 accent-[#a8b2a1]" data-dia="lunes" />
+        <h3 class="text-xl font-bold text-[#bfa89e]">Lunes — Glúteos</h3>
+      </label>
+      <ul class="list-disc list-inside text-[#4a4a4a] mt-2 space-y-1 text-sm">
+        <li>Sentadillas</li>
+        <li>Hip Thrust</li>
+        <li>Puente de glúteos</li>
+        <li>Abdominales</li>
+      </ul>
+      <p class="text-xs mt-4 text-[#4a4a4a]"><strong>Alimentación sugerida:</strong> Batido de proteínas + avena con frutos rojos 🍓</p>
+    </div>
+     </a>
+    <!-- Martes -->
+    <div class="dia bg-white rounded-xl shadow-xl drop-shadow  p-6 transform transition duration-300 hover:scale-110 ">
+      <label class="flex items-center gap-3">
+        <input type="checkbox" class="checkbox w-5 h-5 accent-[#a8b2a1]" data-dia="martes" />
+        <h3 class="text-xl font-bold text-[#bfa89e]">Martes — Espalda y Tríceps</h3>
+      </label>
+      <ul class="list-disc list-inside text-[#4a4a4a] mt-2 space-y-1 text-sm">
+        <li>Dominadas asistidas</li>
+        <li>Remo con barra</li>
+        <li>Extensión de tríceps</li>
+        <li>Cardio suave</li>
+      </ul>
+      <p class="text-xs mt-4 text-[#4a4a4a]"><strong>Alimentación sugerida:</strong> Tortilla con espinacas + arroz integral 🥬</p>
+    </div>
+
+    <!-- Miércoles -->
+    <div class="dia bg-white rounded-xl shadow-xl drop-shadow p-6 transform transition duration-300 hover:scale-110">
+      <label class="flex items-center gap-3">
+        <input type="checkbox" class="checkbox w-5 h-5 accent-[#a8b2a1]" data-dia="miercoles" />
+        <h3 class="text-xl font-bold text-[#bfa89e]">Miércoles — Pierna completa</h3>
+      </label>
+      <ul class="list-disc list-inside text-[#4a4a4a] mt-2 space-y-1 text-sm">
+        <li>Prensa</li>
+        <li>Desplantes</li>
+        <li>Elevación de talones</li>
+        <li>Oblicuos</li>
+      </ul>
+      <p class="text-xs mt-4 text-[#4a4a4a]"><strong>Alimentación sugerida:</strong> Quinoa + pollo a la plancha 🍗</p>
+    </div>
+
+    <!-- Jueves -->
+    <div class="dia bg-white rounded-xl shadow-xl drop-shadow p-6 transform transition duration-300 hover:scale-110 ">
+      <label class="flex items-center gap-3">
+        <input type="checkbox" class="checkbox w-5 h-5 accent-[#a8b2a1]" data-dia="jueves" />
+        <h3 class="text-xl font-bold text-[#bfa89e]">Jueves — Hombros y Pecho</h3>
+      </label>
+      <ul class="list-disc list-inside text-[#4a4a4a] mt-2 space-y-1 text-sm">
+        <li>Press militar</li>
+        <li>Aperturas con mancuernas</li>
+        <li>Fondos entre bancos</li>
+        <li>HIIT</li>
+      </ul>
+      <p class="text-xs mt-4 text-[#4a4a4a]"><strong>Alimentación sugerida:</strong> Hummus + tostadas integrales 🥑</p>
+    </div>
+
+    <!-- Viernes -->
+    <div class="dia bg-white rounded-xl shadow-xl drop-shadpw  p-6 transform transition duration-300 hover:scale-110 lg:col-span-2">
+      <label class="flex items-center gap-3">
+        <input type="checkbox" class="checkbox w-5 h-5 accent-[#a8b2a1]" data-dia="viernes" />
+        <h3 class="text-xl font-bold text-[#bfa89e]">Viernes — Fullbody + Cardio</h3>
+      </label>
+      <ul class="list-disc list-inside text-[#4a4a4a] mt-2 space-y-1 text-sm">
+        <li>Burpees</li>
+        <li>Flexiones</li>
+        <li>Jump Squats</li>
+        <li>Plancha + Crunch</li>
+        <li>Cardio final + estiramiento</li>
+      </ul>
+      <p class="text-xs mt-4 text-[#4a4a4a]"><strong>Alimentación sugerida:</strong> Smoothie verde + plátano 🍌</p>
+    </div>
+
+  </main>
+</div>
+  <!-- 📊 JavaScript -->
+  <footer class="bg-[#bfa89e] text-[#2E2E2E] px-6 py-12 rounded-xl mt-6">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 text-sm">
+    
+    <!-- Columna 1 -->
+    <div>
+      <h4 class="font-bold text-lg mb-4">Sobre Nosotros</h4>
+      <p class="text-[#4a4a4a]">
+        Somos un equipo apasionado por el bienestar físico y mental. Ofrecemos soluciones personalizadas en entrenamiento, nutrición y maternidad.
+      </p>
+    </div>
+
+    <!-- Columna 2 -->
+    <div>
+      <h4 class="font-bold text-lg mb-4">Enlaces</h4>
+      <ul class="space-y-2">
+        <li><a href="servicios.html" class="hover:text-[#a8b2a1]">Servicios</a></li>
+        <li><a href="reserva." class="hover:text-[#a8b2a1]">Reserva tu sesión</a></li>
+        <li><a href="contacto.html" class="hover:text-[#a8b2a1]">Contacto</a></li>
+      </ul>
+    </div>
+
+    <!-- Columna 3 -->
+    <div>
+      <h4 class="font-bold text-lg mb-4">Síguenos</h4>
+      <div class="flex space-x-4">
+        <a href="https://www.instagram.com/" class="hover:text-pink-500 transition">
+    <i class="fab fa-instagram text-2xl"></i>
+ </a>
+        <a href="https://es-es.facebook.com/" class="hover:text-blue-600 transition">
+
+           <i class="fab fa-facebook-f text-2xl"></i>
+
+
+        </a>
+        <a href="https://www.youtube.com/" class="hover:text-red-600 transition">  <i class="fab fa-youtube text-2xl"></i>
+
+</a>
+      </div>
+    </div>
+
+  </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="border-t border-[#bbb] mt-10 pt-6 text-center text-xs text-[#4a4a4a]">
+    &copy; 2025 FitTribe. Todos los derechos reservados.
+  </div>
+</footer>  
+  <script>
+    const checkboxes = document.querySelectorAll('.checkbox');
+    const barraProgreso = document.getElementById('barraProgreso');
+
+    // Cargar estado
+    document.addEventListener('DOMContentLoaded', () => {
+      checkboxes.forEach((cb, i) => {
+        const guardado = localStorage.getItem(`dia-${i}`);
+        cb.checked = guardado === 'true';
+      });
+      actualizarBarra();
+    });
+
+    function actualizarBarra() {
+      const total = checkboxes.length;
+      const completados = [...checkboxes].filter(cb => cb.checked).length;
+      const porcentaje = (completados / total) * 100;
+      barraProgreso.style.width = `${porcentaje}%`;
+
+      // Guardar progreso
+      checkboxes.forEach((cb, i) => {
+        localStorage.setItem(`dia-${i}`, cb.checked);
+      });
+    }
+
+    // Escuchar cambios
+    checkboxes.forEach(cb => cb.addEventListener('change', actualizarBarra));
+    
+ 
+  </script>
+
+</body>
+</html>
+
+
+   
+  
+
+ </body>
+ </html>
+ 
+ 
+ 

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Rutina personalizada</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#f5f0eb] text-[#2E2E2E]">
+
+  <!-- Header -->
+  <header class="bg-white shadow-md py-6 px-8 rounded-b-xl">
+    <h1 class="text-3xl font-bold tracking-tight">🏋️ Rutina: Piernas + Core</h1>
+    <p class="text-[#4a4a4a] mt-1">Duración estimada: 45 min</p>
+    
+    <!-- Barra de progreso -->
+    <div class="bg-[#e7e3de] rounded-full h-4 mt-4 w-full overflow-hidden">
+      <div id="barraProgreso" class="bg-[#a8b2a1] h-full w-0 transition-all duration-500"></div>
+    </div>
+  </header>
+
+  <!-- Ejercicios -->
+  <main class="max-w-4xl mx-auto py-10 px-6 space-y-6">
+
+    <div class="ejercicio bg-white rounded-xl shadow p-6 flex items-center gap-4">
+      <input type="checkbox" class="checkbox w-6 h-6 accent-[#a8b2a1]">
+      <div>
+        <h2 class="text-lg font-bold text-[#bfa89e]">LUNES</h2>
+        <p class="text-[#4a4a4a]">3 series de 15 repeticiones</p>
+      </div>
+    </div>
+
+    <div class="ejercicio bg-white rounded-xl shadow p-6 flex items-center gap-4">
+      <input type="checkbox" class="checkbox w-6 h-6 accent-[#a8b2a1]">
+      <div>
+        <h2 class="text-lg font-bold text-[#bfa89e]">Puente de glúteos</h2>
+        <p class="text-[#4a4a4a]">3 series de 20 segundos</p>
+      </div>
+    </div>
+
+    <div class="ejercicio bg-white rounded-xl shadow p-6 flex items-center gap-4">
+      <input type="checkbox" class="checkbox w-6 h-6 accent-[#a8b2a1]">
+      <div>
+        <h2 class="text-lg font-bold text-[#bfa89e]">Plancha abdominal</h2>
+        <p class="text-[#4a4a4a]">2 series de 30 segundos</p>
+      </div>
+    </div>
+
+    <!-- Mensaje final -->
+    <div id="mensajeFinal" class="text-center text-[#a8b2a1] font-semibold text-xl hidden pt-6">
+      ✅ ¡Rutina completada! ¡Buen trabajo!
+    </div>
+
+  </main>
+<!-- 📅 Rutinas semanales -->
+<section class="max-w-7xl mx-auto py-12 px-6 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+  <!-- Lunes: Glúteos -->
+  <div class="bg-white rounded-xl shadow p-6">
+    <h3 class="text-xl font-bold text-[#bfa89e] mb-2">Lunes</h3>
+    <ul class="list-disc list-inside text-[#4a4a4a] space-y-1">
+      <li>Sentadillas</li>
+      <li>Hip Thrust</li>
+      <li>Puente de glúteos</li>
+      <li>Abdominales inferiores</li>
+    </ul>
+  </div>
+
+  <!-- Martes: Espalda, dominadas y tríceps -->
+  <div class="bg-white rounded-xl shadow p-6">
+    <h3 class="text-xl font-bold text-[#bfa89e] mb-2">Martes</h3>
+    <ul class="list-disc list-inside text-[#4a4a4a] space-y-1">
+      <li>Dominadas asistidas</li>
+      <li>Remo con barra</li>
+      <li>Extensión de tríceps</li>
+      <li>Cardio suave (10 min)</li>
+    </ul>
+  </div>
+
+  <!-- Miércoles: Pierna completa -->
+  <div class="bg-white rounded-xl shadow p-6">
+    <h3 class="text-xl font-bold text-[#bfa89e] mb-2">Miércoles</h3>
+    <ul class="list-disc list-inside text-[#4a4a4a] space-y-1">
+      <li>Prensa de pierna</li>
+      <li>Desplantes caminando</li>
+      <li>Elevación de talones</li>
+      <li>Abdominales oblicuos</li>
+    </ul>
+  </div>
+
+  <!-- Jueves: Hombros, pecho y tríceps -->
+  <div class="bg-white rounded-xl shadow p-6">
+    <h3 class="text-xl font-bold text-[#bfa89e] mb-2">Jueves</h3>
+    <ul class="list-disc list-inside text-[#4a4a4a] space-y-1">
+      <li>Press militar</li>
+      <li>Aperturas con mancuernas</li>
+      <li>Fondos entre bancos</li>
+      <li>Cardio HIIT (15 min)</li>
+    </ul>
+  </div>
+
+  <!-- Viernes: Fullbody + cardio -->
+  <div class="bg-white rounded-xl shadow p-6 lg:col-span-2">
+    <h3 class="text-xl font-bold text-[#bfa89e] mb-2">Viernes</h3>
+    <ul class="list-disc list-inside text-[#4a4a4a] space-y-1">
+      <li>Burpees</li>
+      <li>Jump squats</li>
+      <li>Flexiones</li>
+      <li>Plancha + Crunch</li>
+      <li>Cardio intenso + estiramientos</li>
+    </ul>
+  </div>
+
+</section>
+  <!-- JavaScript -->
+  <script>
+    const checkboxes = document.querySelectorAll('.checkbox');
+    const barraProgreso = document.getElementById('barraProgreso');
+    const mensajeFinal = document.getElementById('mensajeFinal');
+
+    function actualizarProgreso() {
+      const total = checkboxes.length;
+      const completados = [...checkboxes].filter(cb => cb.checked).length;
+      const porcentaje = (completados / total) * 100;
+      barraProgreso.style.width = `${porcentaje}%`;
+
+      // Mostrar mensaje final si está completo
+      mensajeFinal.style.display = completados === total ? 'block' : 'none';
+    }
+
+    // Activar evento en cada checkbox
+    checkboxes.forEach(cb => {
+      cb.addEventListener('change', actualizarProgreso);
+    });
+  </script>
+
+</body>
+</html>
